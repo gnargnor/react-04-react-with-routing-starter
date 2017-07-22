@@ -14,7 +14,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.get('*', (req, res) => {
     console.log('Serving ', req.url);
-    res.sendFile(__dirname + '/src/index.html');
+    res.sendFile(path.join( __dirname + '/src/index.html'));
 });
 
 app.listen(port, (err) => {
