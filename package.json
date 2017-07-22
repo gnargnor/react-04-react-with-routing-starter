@@ -4,7 +4,11 @@
     "description": "React Environment Setup",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "prestart": "babel-node",
+        "start": "npm-run-all --parallel open:src lint:watch",
+        "open:src": "babel-node app.js",
+        "lint": "node_modules/.bin/esw webpack.config.* src server",
+        "lint:watch": "npm run lint -- --watch",
         "webpack": "webpack"
     },
     "author": "Logan Kelly",
@@ -12,7 +16,6 @@
     "dependencies": {
         "babel-polyfill": "^6.23.0",
         "bootstrap": "^3.3.7",
-        "express": "^4.15.3",
         "jquery": "^3.2.1",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
@@ -35,9 +38,11 @@
         "eslint-plugin-react": "^7.1.0",
         "eslint-watch": "^3.1.2",
         "expect": "^1.20.2",
+        "express": "^4.15.3",
         "jsdom": "^11.1.0",
         "mocha": "^3.4.2",
         "npm-run-all": "^4.0.2",
+        "open": "0.0.5",
         "style-loader": "^0.18.2",
         "url-loader": "^0.5.9",
         "webpack": "^3.0.0",
