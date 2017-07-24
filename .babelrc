@@ -2,7 +2,7 @@
     "presets": ["react", "env"],
     "env": {
         "development": {
-           //hot reload 
+           "presets": ["react-hmre"]
         }
     }
 }
