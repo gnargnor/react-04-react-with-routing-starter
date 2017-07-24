@@ -10,7 +10,7 @@ import '../styles/app.css';
 
 export default function App(){
     return (
-      <div className="container-fluid">
+      <div className="container-fluid meat">
         <Header />
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />

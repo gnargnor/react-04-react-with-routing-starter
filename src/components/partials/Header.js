@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const activeStyle = { color: 'red' };
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <NavLink to="/" activeStyle={activeStyle} exact>Home</NavLink>
+            {" | "}
+            <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
         </nav>
     );
 };

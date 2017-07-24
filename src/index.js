@@ -10,8 +10,11 @@ const app = document.getElementById('app');
 
 
 ReactDOM.render(
-    <Router>
-        <Route path="/" component={App} />
-    </Router>,
+    <div class="container-fluid">
+        <Router>
+            <Route path="/" component={App} />
+        </Router>
+    </div>
+    ,
     app
 );
